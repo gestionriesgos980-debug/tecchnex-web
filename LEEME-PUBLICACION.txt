@@ -1,0 +1,22 @@
+TECCHNEX — CAM-PÁGINA-01Z
+PAQUETE DE PUBLICACIÓN PREPARADO
+
+Contenido:
+- index.html
+- styles.css
+- script.js
+- assets/ (imágenes locales necesarias)
+
+PUBLICACIÓN SEGURA EN GITHUB PAGES
+1. Conserva una copia de seguridad del repositorio actual antes de reemplazar archivos.
+2. Abre el repositorio destinado exclusivamente a la página comercial.
+3. Sube el CONTENIDO de esta carpeta al directorio publicado por GitHub Pages (normalmente la raíz si Pages está configurado para /(root)).
+4. No subas la carpeta contenedora ZIP como un subdirectorio: index.html debe quedar en la raíz publicada, junto a styles.css, script.js y assets/.
+5. Espera a que GitHub Pages termine el despliegue y comprueba el sitio publicado en escritorio y móvil.
+6. Prueba enlaces del menú, las tarjetas de necesidad, los botones de contacto y todas las imágenes.
+
+NOTA SOBRE EL FORMULARIO
+El formulario valida los campos y abre un correo preparado a contacto@tecchnex.com mediante mailto:. No envía los datos silenciosamente ni tiene un servidor propio. El visitante necesita un cliente de correo configurado. Verifica primero que el reenvío de contacto@tecchnex.com está funcionando antes de anunciar el sitio.
+
+SEGURIDAD
+Este paquete es una copia independiente CAM-PÁGINA-01Z. No elimina ni modifica el repositorio o la versión estable existente.
