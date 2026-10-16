@@ -1034,3 +1034,128 @@ a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 40p
   .need-image-fallback{display:block}
 }
 @media(prefers-reduced-motion:reduce){.need-image-hotspot{scroll-behavior:auto}}
+
+
+/* CAM-PÁGINA-02A — sección de integración y mejora de sistemas existentes. */
+.integration-value{background:linear-gradient(180deg,#f4f8fc 0%,#fff 100%);border-top:1px solid #e5eef7;border-bottom:1px solid #e5eef7}
+.integration-head{align-items:start}
+.integration-head h2{max-width:760px}
+.integration-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:30px 0}
+.integration-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 8px 24px rgba(12,49,81,.06)}
+.integration-icon{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;letter-spacing:.04em}
+.integration-icon.blue{background:var(--blue)}.integration-icon.cyan{background:#079fc8}.integration-icon.purple{background:var(--purple)}
+.integration-card h3{font-size:1.15rem;line-height:1.25;margin:18px 0 10px;color:var(--navy)}
+.integration-card p{margin:0;color:var(--muted);font-size:.94rem}
+.integration-steps{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:center;padding:22px;background:#fff;border:1px solid var(--line);border-radius:20px}
+.integration-step{display:grid;grid-template-columns:38px 1fr;column-gap:11px;align-items:center}
+.integration-step span{grid-row:span 2;width:38px;height:38px;border-radius:50%;background:#e2f5fc;color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:900}
+.integration-step b{font-size:.95rem;color:var(--navy)}
+.integration-step small{font-size:.78rem;color:var(--muted);line-height:1.4}
+.integration-arrow{font-size:1.4rem;color:var(--cyan);font-weight:900}
+.integration-note{font-size:.82rem;color:var(--muted);max-width:900px;margin:20px 0}
+.integration-cta{margin-top:4px}
+@media(max-width:850px){
+  .integration-grid{grid-template-columns:1fr}
+  .integration-steps{grid-template-columns:1fr;gap:12px}
+  .integration-arrow{transform:rotate(90deg);justify-self:center}
+}
+@media(max-width:560px){
+  .integration-card{padding:22px}
+  .integration-step{grid-template-columns:34px 1fr}
+  .integration-step span{width:34px;height:34px}
+}
+
+
+/* CAM-PÁGINA-02B — ajuste móvil de tarjetas «Construimos contigo».
+   Conserva colores y piezas TECCHNEX; reduce altura, adornos y tipografía en teléfonos. */
+@media (max-width: 620px) {
+  .need-path {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+    padding-top: 7px;
+  }
+  .need-option {
+    width: 100%;
+    min-height: 0;
+    padding: 27px 18px 21px;
+    margin-top: 7px;
+    border-radius: 18px;
+    box-shadow:
+      inset 0 2px 0 rgba(255,255,255,.34),
+      inset 0 -8px 0 rgba(0,0,0,.15),
+      0 8px 14px rgba(12,49,81,.13);
+  }
+  .need-option:before {
+    top: -7px;
+    height: 11px;
+    border-radius: 7px 7px 3px 3px;
+  }
+  .need-option:after {
+    top: -17px;
+    width: 62px;
+    height: 20px;
+    background-size: 30px 100%, 30px 100%;
+  }
+  .need-option .need-visual {
+    justify-content: flex-start;
+    margin-bottom: 9px;
+  }
+  .need-option .need-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    box-shadow: inset 0 -4px 0 rgba(0,0,0,.10);
+  }
+  .need-option h3 {
+    margin: 4px 0 7px;
+    font-size: 1.12rem;
+    line-height: 1.22;
+    letter-spacing: -.015em;
+  }
+  .need-option p {
+    margin: 0;
+    font-size: .91rem;
+    line-height: 1.42;
+    max-width: 38ch;
+  }
+  .need-option:hover,
+  .need-option:focus-visible {
+    transform: none;
+    box-shadow:
+      inset 0 2px 0 rgba(255,255,255,.34),
+      inset 0 -8px 0 rgba(0,0,0,.15),
+      0 8px 14px rgba(12,49,81,.13);
+  }
+  .need-option.is-selected {
+    outline-width: 2px;
+    outline-offset: 2px;
+  }
+  .need-question {
+    padding: 23px 18px;
+    border-radius: 19px;
+  }
+  .need-question h2,
+  .need-question h3 {
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+  .need-build-flow {
+    gap: 7px;
+    justify-content: flex-start;
+  }
+  .need-build-flow .flow-block {
+    font-size: .72rem;
+    padding: 7px 9px;
+  }
+}
+
+/* CAM-PÁGINA-01Z — el encabezado fijo no debe tapar la sección de destino. */
+html {
+  scroll-behavior: smooth;
+}
+#inicio, #contacto {
+  scroll-margin-top: 92px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

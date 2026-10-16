@@ -67,3 +67,18 @@ needChoices.forEach(card => {
     if(event.key === 'Enter' || event.key === ' '){event.preventDefault();chooseNeed(card);}
   });
 });
+
+// CAM-PÁGINA-01Z — navegación explícita al inicio desde menú y pie de página.
+document.querySelectorAll('a[href="#inicio"]').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const nav = document.getElementById('mainNav');
+    const toggle = document.getElementById('menuToggle');
+    nav?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    if (window.location.hash !== '#inicio') {
+      window.history.replaceState(null, '', '#inicio');
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  });
+});
