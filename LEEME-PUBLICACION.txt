@@ -20,3 +20,26 @@ El formulario valida los campos y abre un correo preparado a contacto@tecchnex.c
 
 SEGURIDAD
 Este paquete es una copia independiente CAM-PÁGINA-01Z. No elimina ni modifica el repositorio o la versión estable existente.
+
+
+CAM-PÁGINA-02A — INTEGRACIÓN Y MEJORA
+Se añadió la sección comercial “Mejoramos lo que ya tienes. Conectamos lo que necesitas.” y el enlace “Integración y mejora” en la navegación.
+La sección comunica la propuesta de adaptar soluciones, evaluar conexiones con herramientas existentes y mejorar la operación. No promete integraciones automáticas: indica que cada conexión depende de validación técnica, permisos, seguridad y alcance acordado.
+
+
+CAMBIO CAM-PÁGINA-02B — V4
+- Se conserva la V3 como base y se genera una copia independiente.
+- Se compactan las tarjetas «Tengo una idea», «Tengo un problema» y «Ya tengo algo y quiero mejorarlo» en móvil.
+- Se reducen studs decorativos, padding y tamaños de texto para evitar bloques excesivamente altos.
+- Se mantienen colores, identidad y disposición de escritorio.
+- Se conserva el desplazamiento explícito al inicio desde el menú y el pie.
+- Validación pendiente del usuario: probar en Chrome de escritorio y teléfono, revisar los dos enlaces de inicio y seleccionar las tres tarjetas.
+- No se ha publicado en GitHub Pages ni se han conectado servicios externos.
+
+
+CAM-PÁGINA-03 — V6 MÓVIL:
+En pantallas de hasta 620 px, se sustituyen las tarjetas CSS por cinco imágenes PNG transparentes suministradas por el usuario (hero, tres opciones y proceso). Las opciones siguen siendo interactivas y conservan data-need-choice. La vista de escritorio no se modifica intencionalmente.
+
+CAM-PÁGINA-04 — V7: retirada la imagen hero redundante “¿Qué quieres mejorar?” de la secuencia móvil. Se conservan las opciones azul, morada y verde, seguidas por la franja de proceso. Ajustes CSS fuerzan visibilidad de las tres imágenes en móvil.
+
+CAM-PÁGINA-05 — V8: corrección reforzada para ocultar la composición gráfica anterior en móvil y mostrar las tres imágenes separadas, incluida la verde al final. Al actualizar un sitio publicado, subir index.html y styles.css juntos y recargar sin caché.
