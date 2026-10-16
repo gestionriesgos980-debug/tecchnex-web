@@ -1159,3 +1159,136 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+
+/* CAM-PÁGINA-03: en móvil, sustituir las tarjetas generadas por CSS por las imágenes originales entregadas. */
+.need-mobile-images {
+  display: none;
+}
+@media (max-width: 620px) {
+  .need-mobile-images {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    margin: 12px auto 18px;
+  }
+  .need-mobile-hero,
+  .need-mobile-option {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    line-height: 0;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .need-mobile-hero img,
+  .need-mobile-option img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+  }
+  .need-mobile-process {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 2px 0 0;
+    background: transparent;
+  }
+  /* Ocultar de verdad el diseño anterior para que no aparezcan duplicados. */
+  .need-image-stage,
+  .need-image-fallback,
+  .need-path,
+  .need-build {
+    display: none !important;
+  }
+}
+
+
+/* CAM-PÁGINA-04: ajuste solicitado tras validación visual móvil.
+   Se elimina la imagen principal redundante y se muestra la opción verde al final de las opciones. */
+@media (max-width: 620px) {
+  .need-mobile-images {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .need-mobile-option {
+    display: block !important;
+    flex: 0 0 auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .need-mobile-option img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .need-mobile-process {
+    order: 4;
+  }
+}
+
+
+/* CAM-PÁGINA-05: corrección reforzada tras captura de validación.
+   Eliminar la composición gráfica anterior en móvil y mostrar solo las tres imágenes separadas. */
+@media screen and (max-width: 620px) {
+  html body .need-image-stage,
+  html body .need-image-fallback,
+  html body .need-path,
+  html body .need-build {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .need-mobile-images {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  html body .need-mobile-images .need-mobile-option {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex: none !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  html body .need-mobile-images .need-mobile-option img,
+  html body .need-mobile-images .need-mobile-process {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
